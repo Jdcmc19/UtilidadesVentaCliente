@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane fx:id="paneBC" prefHeight="1008.0" prefWidth="1918.0">
+         <children>
+            <Pane fx:id="pane" layoutX="-6.0" layoutY="1.0" prefHeight="1008.0" prefWidth="511.0" />
+            <TableView fx:id="tableData" layoutX="521.0" layoutY="192.0" prefHeight="767.0" prefWidth="1375.0" style="-fx-background-color: white;">
+              <columns>
+                <TableColumn fx:id="colTitulo" prefWidth="230.0" />
+                <TableColumn fx:id="colFactura" prefWidth="113.0" text="FACTURA" />
+                  <TableColumn fx:id="colTipoPago" prefWidth="113.0" text="TIPO DE PAGO" />
+                  <TableColumn fx:id="colFecha" prefWidth="113.0" text="FECHA" />
+                  <TableColumn fx:id="colCantidad" prefWidth="113.0" text="CANTIDAD" />
+                  <TableColumn fx:id="colDescuento" prefWidth="113.0" text="DESCUENTO" />
+                  <TableColumn fx:id="colPrecio" prefWidth="113.0" text="PRECIO" />
+                  <TableColumn fx:id="colCosto" prefWidth="113.0" text="COSTO" />
+                  <TableColumn fx:id="colVentaNeta" prefWidth="113.0" text="VENTA NETA" />
+                  <TableColumn fx:id="colUtilidad" prefWidth="113.0" text="UTILIDAD" />
+                  <TableColumn fx:id="colPorcentaje" prefWidth="113.0" text="\%UTILIDAD" />
+              </columns>
+            </TableView>
+            <Button fx:id="btoAbrirExcel" layoutX="1808.0" layoutY="155.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Generar Excel">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <TextField fx:id="txtNombreFile" layoutX="1591.0" layoutY="155.0" prefHeight="25.0" prefWidth="212.0" promptText="Nombre del archivo a generar. (Opcional)" />
+            <Label layoutX="1514.0" layoutY="159.0" text="Nombre:" />
+            <TextField fx:id="txtIndicadorCargar" layoutX="1591.0" layoutY="125.0" prefHeight="25.0" prefWidth="212.0" promptText="Identificador del archivo. (Opcional)" />
+            <Label layoutX="1514.0" layoutY="129.0" prefHeight="17.0" prefWidth="73.0" text="Identificador:" />
+            <ListView fx:id="listFile" layoutX="521.0" layoutY="3.0" prefHeight="179.0" prefWidth="872.0" />
+            <Button fx:id="btoIniciar" layoutX="1402.0" layoutY="156.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Iniciar">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button fx:id="btoCargarExcel" layoutX="1402.0" layoutY="125.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Cargar Excel">
+               <font>
+                  <Font size="10.0" />
+               </font></Button>
+            <Button fx:id="btoEliExcel" layoutX="1402.0" layoutY="93.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Eliminar Excel">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Button fx:id="btoLimpiarReporte" layoutX="1402.0" layoutY="60.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Limpiar Reporte" wrapText="true">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblCantidad" layoutX="1091.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblDescuento" layoutX="1204.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblPrecio" layoutX="1317.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblCosto" layoutX="1430.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblVentaNeta" layoutX="1543.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblUtilidad" layoutX="1656.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+            <Label fx:id="lblPorcentaje" layoutX="1769.0" layoutY="965.0" prefHeight="25.0" prefWidth="112.0" />
+         </children>
+      </Pane>
+   </children>
+</GridPane>
